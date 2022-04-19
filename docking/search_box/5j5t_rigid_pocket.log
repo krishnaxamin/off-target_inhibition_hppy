@@ -1,0 +1,33 @@
+loading receptor: C:/Users/krish/Documents/Cambridge/2021-2022/SysBio/Project/docking/5j5t_kinase.pdbqt
+loading ligand: C:/Users/krish/Documents/Cambridge/2021-2022/SysBio/Project/docking/ligands/6G2.pdbqt
+
+set box using ligand
+    Box center:    18.892    -7.772    13.053
+    Box length:    23.250    12.000    15.000
+    Box size  :        62        32        40
+    padding   :     4.000
+    spacing   :     0.375
+
+identifying pockets using AutoSite ....
+    found 3 pocket(s)
+
+    pocket|  energy | # of |Rad. of | energy |   bns    | score  
+    number|         |points|gyration|per vol.|buriedness|v*b^2/rg
+    ------+---------+------+--------+--------+----------+---------
+        1   -176.10   338    5.39     -0.52      0.85      45.05
+        2    -12.38    23    1.76     -0.54      0.68       6.02
+        3     -5.70    11    1.08     -0.52      0.62       3.89
+    merging clusters ...
+done. got 372 fill Points, in 0.98 (sec)
+
+setting map types using: all to ['HS', 'Mg', 'HD', 'NA', 'Fe', 'Br', 'NS', 'A', 'C', 'Mn', 'G', 'F', 'I', 'H', 'J', 'N', 'Q', 'P', 'S', 'GA', 'Z', 'Zn', 'Cl', 'Ca', 'OA', 'SA', 'OS']
+
+computing maps for center=(18.892 -7.772 13.053) size=(23.250 12.000 15.000) dims=(62 32 40) ...
+    372 points inside the box
+
+    maps computed in 15.42 (sec)
+Adding gradient to maps ...
+done adding gradient to maps 14.78 (sec)
+making target file ligPocket_v2.trg ...done.
+    done. 31.69 (sec)
+

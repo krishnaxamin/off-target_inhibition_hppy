@@ -1,0 +1,50 @@
+loading receptor: C:/Users/krish/Documents/Cambridge/2021-2022/SysBio/Project/docking/receptors/5j5t_kinase.pdbqt
+loading ligand: C:/Users/krish/Documents/Cambridge/2021-2022/SysBio/Project/docking/ligands/6G2.pdbqt
+
+set box using ligand
+    Box center:    18.892    -7.772    13.053
+    Box length:    29.250    18.000    21.000
+    Box size  :        78        48        56
+    padding   :     7.000
+    spacing   :     0.375
+
+identifying pockets using AutoSite ....
+    found 9 pocket(s)
+
+    pocket|  energy | # of |Rad. of | energy |   bns    | score  
+    number|         |points|gyration|per vol.|buriedness|v*b^2/rg
+    ------+---------+------+--------+--------+----------+---------
+        1    -99.83   190    4.42     -0.53      0.85      30.92
+        2    -35.97    73    2.66     -0.49      0.82      18.54
+        3    -34.37    48    2.46     -0.72      0.94      17.21
+        4    -22.16    50    2.06     -0.44      0.83      16.89
+        5    -14.52    22    1.48     -0.66      0.93      12.92
+        6    -12.33    23    1.76     -0.54      0.68       6.02
+        7     -8.45    17    1.37     -0.50      0.68       5.78
+        8     -7.64    10    1.03     -0.76      0.63       3.91
+        9     -4.74    10    1.14     -0.47      0.66       3.88
+    merging clusters ...
+done. got 443 fill Points, in 2.93 (sec)
+
+setting map types using: all to ['HS', 'Mg', 'HD', 'NA', 'Fe', 'Br', 'NS', 'A', 'C', 'Mn', 'G', 'F', 'I', 'H', 'J', 'N', 'Q', 'P', 'S', 'GA', 'Z', 'Zn', 'Cl', 'Ca', 'OA', 'SA', 'OS']
+
+computing maps for center=(18.892 -7.772 13.053) size=(29.250 18.000 21.000) dims=(78 48 56) ...
+    443 points inside the box
+
+    maps computed in 40.24 (sec)
+the following 56 flexible receptor atoms did not contribute to the grid calculation:
+  A:ILE22:CA,CB,CG1,CG2,CD1,
+  A:VAL30:CA,CB,CG1,CG2,
+  A:LYS45:CA,CB,CG,CD,CE,NZ,HZ1,HZ2,HZ3,
+  A:MET90:CA,CB,CG,SD,CE,
+  A:GLU91:CD,OE1,OE2,CA,CB,CG,
+  A:PHE92:CA,CB,CG,CD1,CD2,CE1,CE2,CZ,
+  A:CYS93:CA,CB,SG,HG,
+  A:ASP100:CA,CB,OD1,OD2,CG,
+  A:LEU143:CA,CB,CG,CD1,CD2,
+  A:ASP154:CA,CG,OD1,OD2,CB,
+Adding gradient to maps ...
+done adding gradient to maps 52.53 (sec)
+making target file 5j5t_flex_pocket.trg ...done.
+    done. 97.60 (sec)
+

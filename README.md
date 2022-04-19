@@ -34,7 +34,7 @@ Commands to get the 5 views (Views A-E) used to generate the PyMOL images.
 ## source_data
 Soure data files.
 ## .py files
-Scripts that carry out data preparation and machine learning capabilities, and one for coloring alignments in PyMOL by distance between alpha carbon atoms.
+Scripts and a Colab notebook that carry out data preparation and machine learning capabilities and a script for coloring alignments in PyMOL by distance between alpha carbon atoms.
 ### colorbyrmsd.py
 'Align two structures and show the structural deviations in color to more easily see variable regions. Colors each mobile/target atom-pair by distance (the name is a bit misleading). Modifies the B-factor columns in your original structures.'
 [Source](http://pymolwiki.org/index.php/ColorByRMSD)
@@ -42,6 +42,8 @@ Scripts that carry out data preparation and machine learning capabilities, and o
 Script to collect and clean data from ChEMBL and UKB. Data to be used for training and testing, and to make predictions on.
 ### dnn_class.py
 Script to run tuned models, get their losses on training and validation data over their training, their performance on test data and their predictions on query UKB data.
+### dnn_class_colab.ipynb
+Colab notebook that repliates dnn_class.py. Tuned models had to be run on Colab as my laptop did not have the memory for it.
 ### dnn_tuning.py
 Script to use keras-tuner for hyperparameterisation. Train-val-test splits can be varied.
 Things tuned:

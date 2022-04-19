@@ -150,7 +150,7 @@ approved_drugs_small_mols_slim.to_csv('padel/molecule.smi', sep='\t', index=Fals
 ######
 
 # list provided by Yizhou
-ukb_drugs = read_csv('data/drug_ukb_dt_SMILES.csv')
+ukb_drugs = read_csv('source_data/drug_ukb_dt_SMILES.csv')
 ukb_drugs_notna = ukb_drugs[ukb_drugs.smiles.notna()].reset_index(drop=True)
 
 ukb_smiles = []

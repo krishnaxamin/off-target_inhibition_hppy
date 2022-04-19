@@ -1,5 +1,9 @@
 library(bio3d)
 
+"
+Script to convert mol2 file format into pdb file format.
+"
+
 # predicted inhibitors
 losartan_mol2 <- read.mol2('C:/Users/krish/Documents/Cambridge/2021-2022/SysBio/Project/structures/losartan.mol2.gz')
 losartan_pdb <- as.pdb(losartan_mol2)

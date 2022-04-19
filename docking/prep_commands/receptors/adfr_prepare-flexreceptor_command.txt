@@ -1,0 +1,5 @@
+"C:/Program Files (x86)/ADFRsuite-1.0/bin/prepare_flexreceptor" ^
+-r "C:/Users/krish/Documents/Cambridge/2021-2022/SysBio/Project/docking/receptors/5j5t_kinase.pdbqt" ^
+-s "5j5t_kinase:A:ILE22_VAL30_LYS45_MET90_GLU91_PHE92_CYS93_ASP100_LEU143_ASP154" ^
+-g "C:/Users/krish/Documents/Cambridge/2021-2022/SysBio/Project/docking/receptors/5j5t_kinase_not_flex.pdbqt" ^
+-x "C:/Users/krish/Documents/Cambridge/2021-2022/SysBio/Project/docking/receptors/5j5t_kinase_flex.pdbqt"

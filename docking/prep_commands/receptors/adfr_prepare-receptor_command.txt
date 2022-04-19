@@ -1,0 +1,3 @@
+"C:/Program Files (x86)/ADFRsuite-1.0/bin/prepare_receptor" ^
+-r "C:/Users/krish/Documents/Cambridge/2021-2022/SysBio/Project/structures/5j5t_kinase_Hs.pdb" ^
+-o "C:/Users/krish/Documents/Cambridge/2021-2022/SysBio/Project/docking/receptors/5j5t_kinase.pdbqt"

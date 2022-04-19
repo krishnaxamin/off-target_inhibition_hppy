@@ -1,0 +1,6 @@
+"C:/Program Files (x86)/ADFRsuite-1.0/bin/agfr" ^
+-l "C:/Users/krish/Documents/Cambridge/2021-2022/SysBio/Project/docking/ligands/6G2.pdbqt" ^
+-r "C:/Users/krish/Documents/Cambridge/2021-2022/SysBio/Project/docking/receptors/5j5t_kinase.pdbqt" ^
+-f A:ILE22,VAL30,LYS45,MET90,GLU91,PHE92,CYS93,ASP100,LEU143,ASP154 ^
+-P 7 ^
+-o "C:/Users/krish/Documents/Cambridge/2021-2022/SysBio/Project/docking/search_box/5j5t_flex_pocket"

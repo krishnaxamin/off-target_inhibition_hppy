@@ -1,0 +1,14 @@
+receptor = .\receptors\5j5t_kinase.pdbqt
+
+center_x = 18.892
+center_y = -7.772
+center_z = 13.053
+
+size_x = 23.25
+size_y = 12
+size_z = 15
+
+cpu = 6
+
+exhaustiveness = 100
+seed = 42

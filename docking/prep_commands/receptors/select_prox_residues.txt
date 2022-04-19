@@ -1,0 +1,3 @@
+# Command in PyMOL to find all atoms within 4.0 Angstroms of 6G2
+
+select prox_res, 5j5t_kinase within 4.0 of 6G2

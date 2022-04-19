@@ -1,0 +1,4 @@
+"C:/Program Files (x86)/ADFRsuite-1.0/bin/agfr" ^
+-r "C:/Users/krish/Documents/Cambridge/2021-2022/SysBio/Project/docking/5j5t_kinase.pdbqt" ^
+-l "C:/Users/krish/Documents/Cambridge/2021-2022/SysBio/Project/docking/ligands/6G2.pdbqt" ^
+-o "C:/Users/krish/Documents/Cambridge/2021-2022/SysBio/Project/docking/search_box/5j5t_rigid_pocket"

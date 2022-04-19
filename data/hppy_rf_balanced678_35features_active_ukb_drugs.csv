@@ -1,0 +1,10 @@
+UKB_participants_count,canonical_smiles,drugs,predicted_classification
+67388,CC(C)Cc1ccc(cc1)C(C)C(O)=O,ibuprofen,1
+27363,CCOC(=O)[C@H](CCc1ccccc1)N[C@@H](C)C(=O)N2[C@H]3CCC[C@H]3C[C@H]2C(O)=O,ramipril,1
+6067,CCCCc1nc(Cl)c(CO)n1Cc2ccc(cc2)c3ccccc3c4n[nH]nn4,losartan,1
+3738,CC(C)NCC(O)COc1cccc2ccccc12,propranolol,1
+2962,O[S](O)(=O)=O,ferrous_sulphate,1
+2760,NCC1(CCCCC1)CC(O)=O,gabapentin,1
+1658,CNCCc1ccccn1,betahistine,1
+1157,NC(=O)N1c2ccccc2C=Cc3ccccc13,tegretol,1
+1002,O[C@@H](CC[C@@H]1[C@H](N(C1=O)c2ccc(F)cc2)c3ccc(O)cc3)c4ccc(F)cc4,ezetrol,1

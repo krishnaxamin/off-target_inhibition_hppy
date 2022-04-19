@@ -1,0 +1,2 @@
+num_layers,units_0,activation_0,dropout_rate,dropout,lr,units_1,activation_1,units_2,activation_2,tuner/epochs,tuner/initial_epoch,tuner/bracket,tuner/round,tuner/trial_id
+3,224,tanh,0.5,True,4.174947682483555e-05,384,relu,160,relu,500,167,3,3,dd4f47248289af0572ea76372d1c72a2

@@ -1,0 +1,16 @@
+receptor = .\receptors\5j5t_kinase_not_flex.pdbqt
+flex = .\receptors\5j5t_kinase_flex.pdbqt
+
+center_x = 18.892
+center_y = -7.772
+center_z = 13.053
+
+size_x = 29.25
+size_y = 18
+size_z = 21
+
+cpu = 6
+
+exhaustiveness = 100
+
+seed = 42

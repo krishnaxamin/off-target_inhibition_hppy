@@ -1,0 +1,13 @@
+# set directory to where vina.exe is 
+
+# General command to cycle through ligands given a set configuration
+FOR %G in (~ligand-DIR\*.pdbqt) DO vina --config config_file.txt --ligand %G
+
+FOR %G IN (.\ligands\*.pdbqt) DO vina --config vina_rigid_config.txt --ligand %G
+
+FOR %G IN (.\ligands\*.pdbqt) DO vina --config vina_flex_config.txt --ligand %G
+
+# Command to do vina for one ligand
+
+vina --config vina_rigid_config.txt --ligand .\ligands\meloxicam.pdbqt
+vina --config vina_flex_config.txt --ligand .\ligands\meloxicam.pdbqt

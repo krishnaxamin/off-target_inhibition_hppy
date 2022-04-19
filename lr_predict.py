@@ -4,6 +4,10 @@ from sklearn.model_selection import train_test_split
 from numpy import vstack
 from scikit_classifier_funcs import data_balancer
 
+"""
+Uses a selection of LR models to make predictions on UKB data and all approved small molecule drugs from ChEMBL.
+"""
+
 df = read_csv('data/happyhour_inhibitor_name_class_fingerprints.csv')
 
 # input data - features

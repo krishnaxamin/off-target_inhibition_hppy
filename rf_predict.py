@@ -4,6 +4,10 @@ from sklearn.model_selection import train_test_split
 from numpy import vstack
 from scikit_classifier_funcs import data_balancer
 
+"""
+Uses a selection of RF models to make predictions on UKB data.
+"""
+
 df = read_csv('data/happyhour_inhibitor_name_class_fingerprints.csv')
 
 # input data - features

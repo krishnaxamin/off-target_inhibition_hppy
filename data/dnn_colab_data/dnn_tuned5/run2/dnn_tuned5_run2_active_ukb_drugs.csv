@@ -1,5 +1,0 @@
-UKB_participants_count,canonical_smiles,drugs,predicted_classification
-6067,CCCCc1nc(Cl)c(CO)n1Cc2ccc(cc2)c3ccccc3c4n[nH]nn4,losartan,1.0
-1482,CN1C(=C(/O)Nc2sc(C)cn2)/C(=O)c3ccccc3[S]1(=O)=O,meloxicam,1.0
-1111,CCCc1nn(C)c2C(=O)N=C(Nc12)c3cc(ccc3OCC)[S](=O)(=O)N4CCN(C)CC4,sildenafil,1.0
-1002,O[C@@H](CC[C@@H]1[C@H](N(C1=O)c2ccc(F)cc2)c3ccc(O)cc3)c4ccc(F)cc4,ezetrol,1.0

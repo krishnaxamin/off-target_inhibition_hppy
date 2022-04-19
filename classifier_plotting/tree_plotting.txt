@@ -1,0 +1,3 @@
+# watch out for directories etc. The 'dot' command will work in whichever directory you are in, provided you are using the Anaconda Prompt
+
+dot -Tpdf file_name.dot -o output.pdf

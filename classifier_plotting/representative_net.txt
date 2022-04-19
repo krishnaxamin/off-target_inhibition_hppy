@@ -1,0 +1,144 @@
+digraph G {
+
+	graph [fontname = "helvetica"];
+	node [fontname = "helvetica"];
+	edge [fontname = "helvetica"];
+
+        rankdir=LR
+    splines=line
+        
+        node [fixedsize=true, label=""];
+
+        subgraph cluster_0 {
+        color=white;
+        node [style=solid,color="#1B9E77", shape=circle];
+        x1 x2 x3;
+        label = "Flatten (input layer)";
+    }
+
+    subgraph cluster_1 {
+        color=white;
+        node [style=solid,color="#D95F02", shape=circle];
+        a1_2 a2_2 a3_2 a4_2 a5_2 a6_2;
+        label = "1st hidden layer";
+    }
+	
+	subgraph cluster_2 {
+        color=white;
+        node [style=solid,color="#D95F02", shape=circle];
+        a1_3 a2_3 a3_3 a4_3 a5_3;
+        label = "2nd hidden layer";
+    }
+	
+	subgraph cluster_3 {
+        color=white;
+        node [style=solid,color="#D95F02", shape=circle];
+        a1_4 a2_4 a3_4 a4_4;
+        label = "3rd hidden layer";
+    }
+	
+	subgraph cluster_4 {
+        color=white;
+        node [style=solid,color="#7570B3", shape=circle];
+        a1_5 a2_5 a3_5 a4_5;
+        label = "Dropout (rate=0.5)";
+    }
+
+    subgraph cluster_5 {
+        color=white;
+        node [style=solid,color="#E7298A", shape=circle];
+        O1 O2;
+        label="Output layer";
+    }
+
+        x1 -> a1_2;
+        x1 -> a2_2;
+		x1 -> a3_2;
+		x1 -> a4_2;
+		x1 -> a5_2;
+		x1 -> a6_2;
+		
+		x2 -> a1_2;
+        x2 -> a2_2;
+		x2 -> a3_2;
+		x2 -> a4_2;
+		x2 -> a5_2;
+		x2 -> a6_2;
+		
+		x3 -> a1_2;
+        x3 -> a2_2;
+		x3 -> a3_2;
+		x3 -> a4_2;
+		x3 -> a5_2;
+		x3 -> a6_2;
+		
+		a1_2 -> a1_3;
+		a2_2 -> a1_3;
+		a3_2 -> a1_3;
+		a4_2 -> a1_3;
+		a5_2 -> a1_3;
+		a6_2 -> a1_3;
+		
+		a1_2 -> a2_3;
+		a2_2 -> a2_3;
+		a3_2 -> a2_3;
+		a4_2 -> a2_3;
+		a5_2 -> a2_3;
+		a6_2 -> a2_3;
+		
+		a1_2 -> a3_3;
+		a2_2 -> a3_3;
+		a3_2 -> a3_3;
+		a4_2 -> a3_3;
+		a5_2 -> a3_3;
+		a6_2 -> a3_3;
+		
+		a1_2 -> a4_3;
+		a2_2 -> a4_3;
+		a3_2 -> a4_3;
+		a4_2 -> a4_3;
+		a5_2 -> a4_3;
+		a6_2 -> a4_3;
+		
+		a1_2 -> a5_3;
+		a2_2 -> a5_3;
+		a3_2 -> a5_3;
+		a4_2 -> a5_3;
+		a5_2 -> a5_3;
+		a6_2 -> a5_3;
+		
+		a1_3 -> a1_4;
+		a2_3 -> a1_4;
+		a3_3 -> a1_4;
+		a4_3 -> a1_4;
+		a5_3 -> a1_4;
+		
+		a1_3 -> a2_4;
+		a2_3 -> a2_4;
+		a3_3 -> a2_4;
+		a4_3 -> a2_4;
+		a5_3 -> a2_4;
+		
+		a1_3 -> a3_4;
+		a2_3 -> a3_4;
+		a3_3 -> a3_4;
+		a4_3 -> a3_4;
+		a5_3 -> a3_4;
+		
+		a1_3 -> a4_4;
+		a2_3 -> a4_4;
+		a3_3 -> a4_4;
+		a4_3 -> a4_4;
+		a5_3 -> a4_4;
+		
+		a1_4 -> a1_5;
+		
+		a4_4 -> a4_5;
+
+        a1_5 -> O1;
+        a4_5 -> O1;
+		
+		a1_5 -> O2;
+		a4_5 -> O2
+
+}

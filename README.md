@@ -32,7 +32,7 @@ Commands to get the 5 views (Views A-E) used to generate the PyMOL images.
 ## scrap_py_files
 .py files that I made but were not used in the project. Maintained here for my storage want more than anything else.
 ## source_data
-Soure data files.
+Soure data files used by the .py files below.
 ## .py files
 Scripts and a Colab notebook that carry out data preparation and machine learning capabilities and a script for coloring alignments in PyMOL by distance between alpha carbon atoms.
 ### colorbyrmsd.py

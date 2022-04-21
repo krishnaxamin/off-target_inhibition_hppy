@@ -1,5 +1,5 @@
 # off-target_inhibition_hppy
-Code used in my thesis for Part III (MSci) in Systems Biology at the University of Cambridge.
+Code used in my thesis for Part III (MSci) in Systems Biology at the University of Cambridge. In the lab of L. Miguel Martins at the MRC Toxicology Unit.
 
 Using a combination of machine learning and molecular docking to suggest which drugs commonly used in the UK may be having off-target effects on human orthologues of happyhour and therefore increasing the risk of alcohol use disorder in those taking the suggested drugs. 
 

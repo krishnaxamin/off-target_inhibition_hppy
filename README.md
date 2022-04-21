@@ -18,10 +18,9 @@ Contains:
 * ADFRsuite commands to prepare ligands for docking
 * ADFRsuite commands to define a search box for docking
 ## hppy_inhibition_r
-R scripts for:
+Contains plots used in the write-up and R scripts for:
 * Conversion of mol2 file format to pdb file format
 * Plotting of data and graph generation
-and the plots that they make.
 ## padel
 What's needed for the conversion of SMILES into PubChem fingerprints, using PaDEL-Descriptor:
 * PaDEL-Descriptor files

@@ -2,7 +2,9 @@ from pandas import read_csv, concat
 from math import sqrt
 
 """
-Script to calculate the RMSD between the original ligand in the PDB crystal structure and the re-docked ligand.
+Script to calculate the RMSD between the original ligand in the PDB crystal structure and the re-docked ligand. 
+The pdbqt file for the re-docked ligand has been altered to include only rows with information about the atoms in Model 
+1, not including rows detailing branches.
 """
 
 docked = read_csv(r'C:\Users\krish\Documents\Cambridge\2021-2022\SysBio\Project\docking\rigid_outputs\6G2_out_py.pdbqt', sep='\s+', header=None)

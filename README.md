@@ -1,5 +1,5 @@
 # off-target_inhibition_hppy
-Code used in my thesis for Part III (MSci) in Systems Biology at the University of Cambridge.
+Code used in my thesis for Part III (MSci) in Systems Biology at the University of Cambridge. In the lab of L. Miguel Martins at the MRC Toxicology Unit.
 
 Using a combination of machine learning and molecular docking to suggest which drugs commonly used in the UK may be having off-target effects on human orthologues of happyhour and therefore increasing the risk of alcohol use disorder in those taking the suggested drugs. 
 
@@ -18,10 +18,9 @@ Contains:
 * ADFRsuite commands to prepare ligands for docking
 * ADFRsuite commands to define a search box for docking
 ## hppy_inhibition_r
-R scripts for:
+Contains plots used in the write-up and R scripts for:
 * Conversion of mol2 file format to pdb file format
 * Plotting of data and graph generation
-and the plots that they make.
 ## padel
 What's needed for the conversion of SMILES into PubChem fingerprints, using PaDEL-Descriptor:
 * PaDEL-Descriptor files
@@ -32,7 +31,7 @@ Commands to get the 5 views (Views A-E) used to generate the PyMOL images.
 ## scrap_py_files
 .py files that I made but were not used in the project. Maintained here for my storage want more than anything else.
 ## source_data
-Soure data files.
+Soure data files used by the .py files below.
 ## .py files
 Scripts and a Colab notebook that carry out data preparation and machine learning capabilities and a script for coloring alignments in PyMOL by distance between alpha carbon atoms.
 ### colorbyrmsd.py

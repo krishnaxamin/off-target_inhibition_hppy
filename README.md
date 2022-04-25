@@ -56,6 +56,8 @@ Things tuned:
 Uses a selection of LR models to make predictions on UKB data and all approved small molecule drugs from ChEMBL.
 ### lr_rfe.py
 Script to perform recursive feature elimination with cross-validation (RFE-CV) for the logistic regression classifier. RFE-CV ranks the features used in learning based on which has the most impact on an entry's predicted classification. It then looks at performance of the classifier using different sets of ranked features, e.g. the top 10 features. Finally, it looks at the performance of the classifier on successively more features, starting with the most important feature and adding the next most important until all the features are used.
+### original_docked_rmsd.py
+Script to calculate the RMSD between the original ligand in the PDB crystal structure and the re-docked ligand.
 ### plot_trees.py
 Script to make .dot files for graphviz plotting of decision trees. Decision trees plotted are the first ones in the forests, which are trained on training data generated using seeds 678 and 981. .dot files are then converted to visualisation files in the terminal.
 ### rf_predict.py 

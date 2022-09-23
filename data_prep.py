@@ -52,6 +52,9 @@ happyhour_inhibition_data_smiles_present_unique = \
                                                               'parent_molecule_chembl_id'])
 happyhour_inhibition_data_smiles_present_unique.to_csv('data/happyhour_inhibition_data_cleaned.csv', index=False)
 
+######
+# prep data for classifier
+
 # classification
 df = read_csv('data/happyhour_inhibition_data_cleaned.csv')
 class_list = []
@@ -106,6 +109,82 @@ df_name_class = df[['molecule_chembl_id', 'classification']].sort_values(by='mol
 df_name_class_fingerprints = concat([df_name_class, fingerprints], axis=1).drop(['Name'], axis=1)
 df_name_class_fingerprints.to_csv('data/happyhour_inhibitor_name_class_fingerprints.csv', index=False)
 
+######
+# prep data for regressor
+df = read_csv('data/happyhour_inhibition_data_cleaned.csv')
+
+# get longest smiles
+smiles = []
+
+for i in df.canonical_smiles.tolist():
+  cpd = str(i).split('.')
+  cpd_longest = max(cpd, key = len)
+  smiles.append(cpd_longest)
+
+smiles = Series(smiles, name='canonical_smiles')
+df['canonical_smiles'] = smiles
+
+# split data into different data types
+df_ic50 = df[df['standard_type'] == 'IC50']  # (99x45)
+df_activity = df[df['standard_type'] != 'IC50']  # (1204x45)
+
+# process ic50 data
+
+# get rid of inexact values
+df_ic50_exact = df_ic50[df_ic50['standard_relation'] == '=']  # (60x45)
+# remove any negative IC50 values
+df_ic50_exact_ranged = df_ic50_exact[df_ic50['standard_value'] >= 0]  # (60x45)
+
+# drop duplicates wrt molecule identity, IC50 value and target (copes with the same molecule having different
+# activities against different orthologs)
+df_ic50_exact_ranged_dups_dropped = df_ic50_exact_ranged.drop_duplicates(['molecule_chembl_id', 'canonical_smiles', 'standard_value', 'target_chembl_id'])
+df_ic50_exact_ranged_dups_dropped.to_csv('data/happyhour_inhibitor_data_cleaned_ic50.csv', index=False)
+
+# get important info
+df_ic50_exact_ranged_dups_dropped_slim = df_ic50_exact_ranged_dups_dropped[['molecule_chembl_id', 'canonical_smiles', 'standard_value']]
+df_ic50_exact_ranged_dups_dropped_slim.to_csv('data/happyhour_inhibitor_data_cleaned_ic50_slim.csv', index=False)
+
+# make molecule.smi file for PaDEL
+df_ic50_exact_ranged_dups_dropped_slim[['canonical_smiles', 'molecule_chembl_id']].to_csv('padel/molecule.smi', sep='\t', index=False, header=False)
+
+# read in fingerprints - create file of molecule_chembl_id, IC50 values, fingerprints
+fingerprints = read_csv('padel/descriptors_output.csv').sort_values(by='Name').reset_index(drop=True)
+df_name_ic50 = df_ic50_exact_ranged_dups_dropped[['molecule_chembl_id', 'standard_value']].sort_values(by='molecule_chembl_id').reset_index(drop=True)
+df_name_ic50_fingerprints = concat([df_name_ic50, fingerprints], axis=1).drop(['Name'], axis=1)
+df_name_ic50_fingerprints.to_csv('data/happyhour_inhibitor_name_ic50_fingerprints.csv', index=False)
+
+# process activity data
+
+# get rid of inexact values
+df_activity_exact = df_activity[df_activity['standard_relation'] == '=']  # (1099x45)
+# remove any activity values not between 0% and 100%
+df_activity_exact_ranged = df_activity_exact[(df_activity_exact['standard_value'] >= 0) &
+                                             (df_activity_exact['standard_value'] <= 100)]  # (1014x45)
+# convert inhibition values into activity values
+for i in range(len(df_activity_exact_ranged)):
+    if df_activity_exact_ranged.iat[i, 30] == 'Inhibition':
+        df_activity_exact_ranged.iat[i, 33] = 100 - df_activity_exact_ranged.iat[i, 33]
+        df_activity_exact_ranged.iat[i, 30] = 'Activity'
+
+# drop duplicates wrt molecule identity, activity value and target (copes with the same molecule having different
+# activities against different orthologs)
+df_activity_exact_ranged_dups_dropped = df_activity_exact_ranged.drop_duplicates(['molecule_chembl_id', 'canonical_smiles', 'standard_value', 'target_chembl_id'])
+df_activity_exact_ranged_dups_dropped.to_csv('data/happyhour_inhibitor_data_cleaned_activity.csv', index=False)
+
+# get important info
+df_activity_exact_ranged_dups_dropped_slim = df_activity_exact_ranged_dups_dropped[['molecule_chembl_id', 'canonical_smiles', 'standard_value']]
+df_activity_exact_ranged_dups_dropped_slim.to_csv('data/happyhour_inhibitor_data_cleaned_activity_slim.csv', index=False)
+
+# make molecule.smi file for PaDEL
+df_activity_exact_ranged_dups_dropped_slim[['canonical_smiles', 'molecule_chembl_id']].to_csv('padel/molecule.smi', sep='\t', index=False, header=False)
+
+# read in fingerprints - create file of molecule_chembl_id, IC50 values, fingerprints
+fingerprints = read_csv('padel/descriptors_output.csv').sort_values(by='Name').reset_index(drop=True)
+df_name_activity = df_activity_exact_ranged_dups_dropped[['molecule_chembl_id', 'standard_value']].sort_values(by='molecule_chembl_id').reset_index(drop=True)
+df_name_activity_fingerprints = concat([df_name_activity, fingerprints], axis=1).drop(['Name'], axis=1)
+df_name_activity_fingerprints.to_csv('data/happyhour_inhibitor_name_activity_fingerprints.csv', index=False)
+
+######
 # find molecules with different activities against different targets
 
 # finds molecules that appear more than once -> 491 molecules do so

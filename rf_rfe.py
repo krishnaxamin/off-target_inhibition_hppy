@@ -41,7 +41,7 @@ for i in range(len(ordered_features)):
     num_features = i + 1
     features_to_use = ordered_features[:num_features]
     x_with_features_to_use = x[features_to_use]
-    rf_stats, rf_features = run_model_multiple(randomforest, x_with_features_to_use, y,
+    rf_stats, rf_models = run_model_multiple(randomforest, x_with_features_to_use, y,
                                                test_size=0.2,
                                                num_iterations=100,
                                                model_type='Random Forest',
